@@ -1,0 +1,19 @@
+CHURN MODEL EXECUTIVE SUMMARY
+=============================
+
+Primary model: Logistic Regression
+Reason: interpretability, probability output, and suitability for decision support.
+
+Test ROC-AUC: 0.644
+Test PR-AUC: 0.077
+Brier score: 0.226
+
+Top-risk decile:
+Observed churn rate: 10.00%
+Lift vs population average: 2.83x
+
+Leakage columns intentionally excluded:
+account_closed, post_churn_balance, churn_reason
+
+Monitoring:
+PSI generated for key features with stable/moderate/significant shift labels.

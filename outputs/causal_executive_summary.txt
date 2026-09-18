@@ -1,0 +1,22 @@
+CAUSAL RETENTION ANALYSIS
+=========================
+
+Naive observed churn difference
+(treated - untreated): -0.63 percentage points
+
+Why naive comparison is biased:
+Campaign assignment is not random. Higher-risk customers were intentionally
+more likely to receive the retention campaign.
+
+Propensity-score matched ATT estimate
+(treated churn - matched-control churn): -2.23 percentage points
+
+Difference-in-Differences outcome:
+Monthly transaction-rate effect: 3.00 transactions/customer
+
+Key assumptions / limitations:
+1. Propensity methods adjust only for observed confounders.
+2. Matching quality must be checked using covariate balance.
+3. Difference-in-Differences relies on a plausible parallel-trends assumption.
+4. Neither method substitutes for randomization when a well-designed experiment is feasible.
+5. These results come from synthetic data and demonstrate methodology, not a real bank intervention.
