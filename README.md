@@ -93,38 +93,6 @@ Synthetic post-outcome fields are deliberately included to demonstrate leakage d
 
 ---
 
-## Project Workflow
-
-
-Synthetic Customer Data
-        |
-        v
-Data Validation
-        |
-        +------------------------------+
-        |                              |
-        v                              v
-Churn Prediction                Campaign Evaluation
-        |                              |
-        v                              v
-Logistic Regression             Propensity Scores
-Random Forest                   Common Support
-Gradient Boosting               Nearest-Neighbor Matching
-        |                              |
-        v                              v
-ROC-AUC / PR-AUC                Covariate Balance
-Calibration                    ATT Estimation
-Lift Analysis                         |
-Leakage Checks                        v
-PSI Drift                       Difference-in-Differences
-        |                              |
-        +--------------+---------------+
-                       |
-                       v
-              Decision-Oriented Insights
-
-
----
 
 # 1. Churn Prediction
 
