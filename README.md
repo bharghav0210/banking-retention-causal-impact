@@ -5,7 +5,7 @@ This is a synthetic banking portfolio PoC designed to demonstrate decision-orien
 
 ## Business questions
 
-1. Which customers are at highest risk of churning?
+1. Which customers are at the highest risk of churning?
 2. Can an interpretable predictive model create useful targeting lift?
 3. Are predicted probabilities reasonably calibrated?
 4. How should model drift be monitored?
@@ -136,35 +136,3 @@ python generate_data.py
 python churn_model.py
 python causal_analysis.py
 ```
-
-## Files generated
-
-`outputs/model_metrics.csv`
-`outputs/lift_deciles.csv`
-`outputs/calibration.csv`
-`outputs/calibration_curve.png`
-`outputs/logistic_coefficients.csv`
-`outputs/psi_drift.csv`
-`outputs/propensity_matched_pairs.csv`
-`outputs/matching_balance.csv`
-`outputs/difference_in_differences.csv`
-
-plus executive summaries.
-
-## Interview narrative
-
-**Problem:** The business wants to reduce churn but has limited retention budget.
-
-**Predictive approach:** I developed an interpretable churn model and evaluated not only discrimination but also calibration and targeting lift.
-
-**Production discipline:** I explicitly removed leakage features and created a simple PSI-based drift-monitoring layer.
-
-**Causal question:** Historical retention outreach was not randomized, so a raw contacted-vs-not-contacted comparison would be biased. I estimated propensity scores, matched similar treated and untreated customers, evaluated balance, and estimated the treatment effect among treated customers.
-
-**Quasi-experimental extension:** I also implemented Difference-in-Differences for a pre/post behavioral outcome and documented the parallel-trends assumption.
-
-**Decision framing:** Prediction answers *who is at risk*. Causal analysis answers *whether an intervention changes outcomes*. They should not be confused.
-
-## Resume bullet
-
-Built a banking retention decision-engine PoC using interpretable churn modeling, probability calibration, decile lift, leakage controls and PSI drift monitoring; evaluated non-random retention campaigns using propensity-score matching and Difference-in-Differences with explicit causal assumptions.
